@@ -1,0 +1,164 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$grey: #424242;
+$red: #f44336;
+
+html {
+	font-family: 'Lato', sans-serif;
+	color: #424242;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $red;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.empty {
+	margin: 150px 0;
+}
+
+table {
+	width:100%;
+	display: table;
+
+	&.striped > tbody {
+		> tr:nth-child(odd) {
+			background-color: lighten($grey, 70%);
+		}
+
+		> tr > td {
+			border-radius: 0;
+		}
+	}
+
+	&.highlight > tbody > tr {
+		transition: background-color .25s ease;
+		&:hover {
+			background-color: lighten($red, 40%);
+		}
+	}
+
+	&.centered {
+		thead tr th, tbody tr td {
+			text-align: center;
+		}
+	}
+
+}
+
+thead {
+	border-bottom: 1px solid $grey;
+}
+
+td, th{
+	padding: 15px 5px;
+	display: table-cell;
+	text-align: left;
+	vertical-align: middle;
+	border-radius: 2px;
+}
+
+input[type=submit] {
+	cursor: pointer;
+	border: 0;
+	border-radius: 0;
+	padding: 0 10px;
+	background: $red;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	outline: none;
+
+	&:hover, &:focus {
+		background: lighten($red, 3%);
+		color: #fff;
+	}
+
+	&:active {
+		background: darken($red, 3%);
+		color: darken(#fff, 3%);
+	}
+}
+
+.btn {
+	cursor: pointer;
+	border: 0;
+	border-radius: 0;
+	padding: 10px;
+	background: $grey;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	outline: none;
+
+	&:hover, &:focus {
+		background: lighten($grey, 3%);
+		color: #fff;
+	}
+
+	&:active {
+		background: darken($grey, 3%);
+		color: darken(#fff, 3%);
+	}
+}
+
+input[type=text] {
+	border: 1px solid lighten($grey, 60%);
+	border-radius: 0;
+	width: 300px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 1.1rem;
+	vertical-align: middle;
+	display: block;
+	margin: 10px auto;
+
+	&:focus {
+		border-color: $red;
+	}
+}
+
+.hello {
+	color: white;
+	background: $red;
+	font-size: 2rem;
+}
+
+.hello h1 {
+	width: 90%;
+	margin: 0 auto;
+	color: $grey;
+	padding: 100px 0 ;
+	background: white;
+	font-size: 6rem;
+}

@@ -1,0 +1,17 @@
+<h1 class="center">New user</h1>
+<%= link_to 'Back', users_index_url, { :class=>"btn" } %>
+
+<div class="center">	
+	<%= form_for @user do |f| -%>
+	<% if @user.errors.any? %>
+	<% @user.errors.full_messages.each do |message| %>
+	<li><%= message %></li>
+	<% end %>
+	<% end %>
+	<%= f.text_field :firstName, placeholder: 'Name' %>
+	<%= f.text_field :lastName, placeholder: 'Last name' %>
+	<%= f.text_field :email, placeholder: 'Email' %>
+
+	<%= f.submit %>
+	<% end -%>
+</div>

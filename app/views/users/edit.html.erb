@@ -1,0 +1,28 @@
+<h1 class="center">Edit user</h1>
+<%= link_to 'Back', users_index_url, { :class=>"btn" } %>
+
+<%= form_for @user do |f| %>
+
+<% if @user.errors.any? %>
+<div id="error_explanation">
+	<h2>
+		<%= pluralize(@user.errors.count, "error") %> prohibited
+		this user from being saved:
+	</h2>
+	<ul>
+		<% @user.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<%= f.text_field :firstName, placeholder: 'Name' %>
+<%= f.text_field :lastName, placeholder: 'Last name' %>
+<%= f.text_field :email, placeholder: 'Email' %>
+
+<div class="center">
+	<%= f.submit %>
+</div>
+
+<% end %>

@@ -1,0 +1,9 @@
+<h1 class="center"><%= @user.firstName %>'s page</h1>
+<%= link_to 'Back', users_index_url, { :class=>"btn" } %>
+
+<div class="hello">
+	<h2 class="center">Hello</h2>
+	<h3 class="center">my name is</h3>
+	<h1 class="center"><%= @user.firstName %> <%= @user.lastName %></h1>
+	<br>
+</div>
